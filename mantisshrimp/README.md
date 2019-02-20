@@ -1,3 +1,9 @@
 # ajestes7.github.io
+
 # Mantis Shrimp Project for SI 339.
-# Each week iteration is saved under the respective folder. Navigate to https://ajestes7.github.io/INSERT_WEEK_FOLDER_NAME for a live view of each respective iteration.
+
+# Each iteration is saved under the respective folder. They are as follows: 
+# https://ajestes7.github.io/mantisshrimp/version1/
+# https://ajestes7.github.io/mantisshrimp/version2/
+# https://ajestes7.github.io/mantisshrimp/version3/
+# https://ajestes7.github.io/mantisshrimp/version4/
