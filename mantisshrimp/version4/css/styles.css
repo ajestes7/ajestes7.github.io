@@ -172,6 +172,11 @@ a.skip:focus {
     padding: 0;
   }
 
+  nav a {
+    font-size: 2.5em;
+    display: inline-block;
+  }
+
 }
 
 @media only screen and (max-width: 615px) {
@@ -180,15 +185,16 @@ a.skip:focus {
   }
 
   nav {
-    font-size: 2em;
     display: inline-block;
   }
 
   nav a {
+    font-size: 1.5em;
     padding: 6px 8px;
   }
 
   nav h1 {
+    font-size: 1.5em;
     padding: 0;
   }
 
