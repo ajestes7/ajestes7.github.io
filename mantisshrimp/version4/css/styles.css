@@ -154,34 +154,26 @@ a.skip:focus {
 }
 
 @media only screen and (max-width: 1024px) {
-  h1 {
-    font-size: 2.25em;
-  }
-
-  h2 {
-    font-size: 2.25em;
-  }
-
   p {
     font-size: 1.5em;
   }
 
   main div {
     width: 100%;
-    margin: 10px 0 10px 0;
+    margin: 0;
     padding: 0;
   }
 
   nav a {
-    font-size: 2.5em;
+    font-size: 2em;
     display: inline-block;
   }
 
 }
 
-@media only screen and (max-width: 615px) {
-  body {
-    font-size: 2.5em;
+@media only screen and (max-width: 540px) {
+  h1 {
+    font-size: 1.25em;
   }
 
   nav {
@@ -189,18 +181,19 @@ a.skip:focus {
   }
 
   nav a {
-    font-size: 1.5em;
+    font-size: 1.75em;
     padding: 6px 8px;
   }
 
   nav h1 {
-    font-size: 1.5em;
+    font-size: 2em;
     padding: 0;
   }
 
   main div {
     width: 100%;
-    margin: 15px 0 15px 0;
+    margin: 0;
     padding: 0;
   }
+
 }
