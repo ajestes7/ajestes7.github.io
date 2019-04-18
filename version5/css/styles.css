@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-content: center;
   color: #FFFFFF;
   margin: 0;
   background-image:url('../images/3ce69531311986a8a78f1e093f53df3d.gif');
@@ -43,6 +44,7 @@ main {
 main div {
   width: 80%;
   height: 50%;
+  background-color: rgb(0, 29, 82);
 }
 
 main img {
@@ -51,8 +53,12 @@ main img {
 }
 
 footer {
+  margin: 0 auto 0 auto;
+  width: 80%;
+  padding-top: 0!important;
   border-top: 1px solid #FFFFFF;
   flex-shrink: 0;
+  background-color: rgb(0, 29, 82)
 }
 
 nav ul {
@@ -110,24 +116,16 @@ ul {
   padding: 0;
 }
 
-footer {
-  margin: 10px;
-  padding: 5px;
-}
-
 figcaption {
-  margin: 10px;
+  padding: 30px 0 30px 0;
   text-align: center;
+  background-color: rgb(0, 29, 82);
 }
 
 header p {
   font-size: 30px;
   margin: 10px;
   padding: 5px;
-}
-
-figure {
-  padding-bottom: 40px;
 }
 
 a.skip {
@@ -174,6 +172,10 @@ a.skip:focus {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  footer {
+    width: 100%;
   }
 
   nav a {
