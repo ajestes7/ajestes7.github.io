@@ -73,10 +73,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #63b6db;
-  background: -moz-linear-gradient(45deg, #63b6db 0%, #309dcf 100%);
-  background: -webkit-linear-gradient(45deg, #63b6db 0%, #309dcf 100%);
-  background: linear-gradient(45deg, #63b6db 0%, #309dcf 100%);
+  background: #2194c9;
   overflow: auto;
 }
 
