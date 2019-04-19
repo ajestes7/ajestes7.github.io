@@ -229,6 +229,16 @@ button {
   transform: rotateY(180deg);
 }
 
+.flip-card-back h1 {
+  color: white;
+  background: rgb(0, 29, 82);
+}
+
+.flip-card-back p {
+  color: white;
+  background: rgb(0, 29, 82);
+}
+
 /* Callout box - fixed position at the bottom of the page */
 .callout {
   position: fixed;
@@ -260,9 +270,10 @@ button {
 /* Close button */
 .closebtn {
   position: absolute;
-  top: -5px;
+  top: 5px;
   right: 40px;
   color: white;
+  background: rgb(0, 29, 82);
   font-size: 60px;
   cursor: pointer;
 }
