@@ -13,7 +13,7 @@
   <body>
     <a href = "#content" class = "skip">Skip to Content</a>
     <header>
-      <nav>
+      <nav id="navbar">
         <h1>The Mantis Shrimp</h1>
         <ul>
           <li><a href = "index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -24,65 +24,65 @@
       </nav>
     </header>
     <main id = "content">
-      <div class="facts-header">
-        <h2>Mantis Shrimp Facts</h2>
+      <div class="facts-header content-div">
+        <h2 id="header1">Mantis Shrimp Facts</h2>
           <p>Below are 9 amazing facts about the infamous mantis shrimp!</p>
       </div>
-      <div>
+      <div class="content-div">
         <p>Most mantis shrimp species grow to about 2 to 7 inches long in their adulthood.</p>
         <figure>
           <img src="./images/14857643528_6553be3bd4_b.jpg" alt="Image of the Mantis Shrimp for Fact #1.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>The eyes of mantis shrimp are located on the long stalks that can move independently, using this exceptional eyesight to detect predators and prey alike.</p>
         <figure>
           <img src="./images/180501193534_1_540x360.jpg" alt="Image of the Mantis Shrimp for Fact #2.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>Mantis shrimp either have spears or clubs as their weapons of choice, although both are equally deadly.</p>
         <figure>
           <img src="./images/Mantis_shrimp_(Odontodactylus_scyllarus).jpg" alt="Image of the Mantis Shrimp for Fact #3.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>The mantis shrimp attack happens about 50 times faster than the blink of an eye. This punch has a velocity of 10 meters per second, the same power of a .22 caliber bullet.</p>
         <figure>
           <img src="./images/Mantis_shrimp_from_front.jpg" alt="Image of the Mantis Shrimp for Fact #4.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>The species of mantis shrimps with clubs oftentimes break the glass of aquariums.</p>
         <figure>
           <img src="./images/Mantis_shrimp_near_Nusa_Kode_Island_1.jpg" alt="Image of the Mantis Shrimp for Fact #5.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>Most species of mantis shrimps live alone or with a mate, only leaving their burrow to catch prey.</p>
         <figure>
           <img src="./images/Mantis_Shrimp_with_Nudibranch.jpg" alt="Image of the Mantis Shrimp for Fact #6.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>Mantis shrimps can identify friends and neighbors through smell and by the anatomical characteristics.</p>
         <figure>
           <img src="./images/mantis-shrimp-flickr-creative-commons-raymond.jpg" alt="Image of the Mantis Shrimp for Fact #7.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>Some species of mantis shrimp are monogamous and spend up to 20 years together.</p>
         <figure>
           <img src="./images/OdontodactylusScyllarus.jpg" alt="Image of the Mantis Shrimp for Fact #8.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>Mantis shrimp can survive more than 20 years in the wild.</p>
         <figure>
           <img src="./images/OdontodactylusScyllarus2.jpg" alt="Image of the Mantis Shrimp for Fact #9.">
         </figure>
       </div>
-      <div>
+      <div class="content-div">
         <p>Male mantis shrimp often emit grunts at dawn and dusk, the periods of the day when they’re most likely to be hunting for food or guarding their homes. Scientists theorize that the growls are meant to attract mates and ward off competitors.</p>
         <figure>
           <img src="./images/Peacock_Mantis_Shrimp_(14463956821).jpg" alt="Image of the Mantis Shrimp for Fact #9.">
@@ -92,5 +92,24 @@
   <footer>
     <p>Created by AJ Estes, 2019.</p>
   </footer>
+  <script>
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+      
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+      
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+  </script>
   </body>
 </html>

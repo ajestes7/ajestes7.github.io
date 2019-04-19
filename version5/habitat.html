@@ -13,7 +13,7 @@
   <body>
     <a href = "#content" class = "skip">Skip to Content</a>
     <header>
-      <nav>
+      <nav id="navbar">
         <h1>The Mantis Shrimp</h1>
         <ul>
           <li><a href = "index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -24,17 +24,43 @@
       </nav>
     </header>
     <main id = "content">
-      <div>
-        <h2>Mantis Shrimp Habitat</h2>
+      <div class="content-div">
+        <h2 id="header1">Mantis Shrimp Habitat</h2>
           <p>Mantis shrimp are usually found in shallow tropical or subtropical waters, with some species occasionally found in sub-Antarctic waters. They are found along shores, usually living in an abandoned burrow to move in and out to capture prey when spotted. They can also live in coral reefs or rock crevices.</p>
           <figure>
             <img src="./images/peacock-mantis-shrimp.jpg" alt="Image displaying the Peacock Mantis Shrimp in its habitat." width = "800" height = "500">
             <figcaption>Peacock Mantis Shrimp in its Habitat</figcaption>
           </figure>
       </div>
+      <div class="callout">
+          <div class="callout-header">Did You Know?</div>
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <div class="callout-container">
+            <p>The Mantis Shrimp is capable of breaking aquarium glass</p>
+          </div>
+        </div>
     </main>
     <footer>
       <p>Created by AJ Estes, 2019.</p>
     </footer>
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
+        
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+        
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
   </body>
 </html>

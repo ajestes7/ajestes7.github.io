@@ -13,7 +13,7 @@
   <body>
     <a href = "#content" class = "skip">Skip to Content</a>
     <header>
-      <nav>
+      <nav id="navbar">
         <h1>The Mantis Shrimp</h1>
         <ul>
           <li><a href = "index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -24,21 +24,72 @@
       </nav>
     </header>
     <main id = "content">
-      <div>
-        <h2>Mantis Shrimp Cuisine</h2>
+      <div class="content-div">
+        <h2 id="header1">Mantis Shrimp Cuisine</h2>
           <p>If one is ever able to defeat a mantis shrimp, they are known to make great food! The mantis shrimp are oftentimes boiled whole and served on a variety of dishes, such as sushi toppings. The mantis shrimp is apart of many different cuisines, such as the Mediterranean cuisine in Italy and the Asian cuisine in Thailand. Next time you have the chance, dig into some mantis shrimp. That is, before they dig into you…</p>
-          <figure>
-            <img src="./images/unnamed.jpg" alt="Image displaying the Mantis Shrimp as a deep-fried dish." width = "800" height = "500">
-            <figcaption>Deep-Fried Mantis Shrimp</figcaption>
-          </figure>
-          <figure>
-            <img src="./images/Fried_Mantis_Shrimp_in_Typhoon_Shelter_Style.jpg" alt="Image displaying the Mantis Shrimp as it would be served as food." width = "800" height = "500">
-            <figcaption>Traditional Mantis Shrimp Dish</figcaption>
-          </figure>
+        <figure>
+          <img src="./images/unnamed.jpg" alt="Image displaying the Mantis Shrimp as a deep-fried dish." width = "800" height = "500">
+          <figcaption>Deep-Fried Mantis Shrimp</figcaption>
+        </figure>
+        <figure>
+          <img src="./images/Fried_Mantis_Shrimp_in_Typhoon_Shelter_Style.jpg" alt="Image displaying the Mantis Shrimp as it would be served as food." width = "800" height = "500">
+          <figcaption>Traditional Mantis Shrimp Dish</figcaption>
+        </figure>
       </div>
+        <button class="accordion">Cuisine Fact #1</button>
+          <div class="panel">
+            <p>Mantis Shrimp is a rare dish, only for special occasions!</p>
+          </div>
+        <button class="accordion">Cuisine Fact #2</button>
+          <div class="panel">
+            <p>Mantis Shrimp is most popular in countries such as Japan and Thailand.</p>
+          </div>
+        <button class="accordion">Cuisine Fact #3</button>
+          <div class="panel">
+            <p>Mants Shrimp is often seasoned with salt and pepper.</p>
+          </div>
   </main>
   <footer>
-    <p>Created by AJ Estes, 2019.</p>
+      <p>Created by AJ Estes, 2019.</p>
   </footer>
+  <script>
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+      
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+      
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+  </script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+    
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
   </body>
 </html>

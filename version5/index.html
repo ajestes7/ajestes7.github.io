@@ -9,11 +9,24 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Staatliches'>
     <link rel="icon" href="images/favicon.png">
+    <script>
+        var i = 0;
+        var txt = 'Introducing The Mantis Shrimp';
+        var speed = 50;
+        
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("header1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+    </script>
   </head>
-  <body class = 'homepage_background'>
+  <body class = 'homepage_background' onload="typeWriter()">
     <a href = "#content" class = "skip">Skip to Content</a>
     <header>
-      <nav>
+      <nav id="navbar">
         <h1>The Mantis Shrimp</h1>
         <ul>
           <li><a href = "index.html" class = "current_page"><i class="fas fa-home"></i> Home</a></li>
@@ -24,26 +37,88 @@
       </nav>
     </header>
     <main id = "content">
-      <div class="home-image">
-        <h2>Introducing The Mantis Shrimp</h2>
-          <p>Behold, the mantis shrimp! The mantis shrimp is no ordinary shrimp and is certainly no ordinary mantis. The mantis shrimp is unique from other ocean dwellers in many ways, such as their fascinating colors to their mating habits. The Mantis Shrimp is, without a doubt, the most interesting creature in the sea, and only gets weirder as you learn more about it.</p>
-          <figure>
-            <img src="./images/pm-shrimp.jpg" alt="Image displaying what the mantis shrimp looks like." width = "800" height = "500">
-            <figcaption>Mantis Shrimp</figcaption>
-          </figure>
+      <div class="content-div">
+        <h2 id="header1"></h2>
+        <p>Behold, the mantis shrimp! The mantis shrimp is no ordinary shrimp and is certainly no ordinary mantis. The mantis shrimp is unique from other ocean dwellers in many ways, such as their fascinating colors to their mating habits. The Mantis Shrimp is, without a doubt, the most interesting creature in the sea, and only gets weirder as you learn more about it.</p>
       </div>
-      <div>
+      <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./images/pm-shrimp.jpg" alt="Image displaying what the mantis shrimp looks like." width = "800" height = "500">
+            </div>
+            <div class="flip-card-back">
+              <h1>Mantis Shrimp</h1> 
+              <p>I bet you are in absolute awe in the site of this beautiful creature. You should be. Take it all in!</p> 
+              <p>Be careful though, he bites!</p>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="content-div">
         <h2>Power</h2>
           <p>The mantis shrimp is one of the strongest creatures on the planet in terms of relative strength. Although the mantis shrimp is typically about 3.9 inches long, they can still pack a punch. The mantis shrimp punch is equivalent to the force of a bullet shot from a 22 caliber gun. This punch is great for capturing prey and even breaking aquarium glass!</p>
       </div>
-      <div>
+      <div class="content-div">
         <h2>Speed</h2>
           <p>The mantis shrimp not only packs a powerful punch but a fast one as well. The mantis shrimp can swing at its prey in less than 800 microseconds! To put that into perspective, the human eye blinks in about 350,000 microseconds. In short, it is best to remain friends with the mantis shrimp.</p>
       </div>
-      <div>
+      <div class="content-div">
         <h2>Mating</h2>
           <p>Some species of the mantis shrimp are known the mate for life. That’s right, these mantis shrimps are all about monogamy. They burrow together and share the responsibilities of protecting their eggs. Talk about romance!</p>
       </div>
+      <div class="content-div"> 
+          <h2>Check out this video of a mantis shrimp fighting a clam!</h2>
+          <button onclick="playPause()">Play/Pause</button> 
+          <button onclick="makeBig()">Big</button>
+          <button onclick="makeSmall()">Small</button>
+          <button onclick="makeNormal()">Normal</button>
+          <br><br>
+          <video id="video" width="300">
+            <source src="./videos/mantisshrimp.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+      </div> 
+      <script> 
+        var myVideo = document.getElementById("video"); 
+        
+        function playPause() { 
+          if (myVideo.paused) 
+            myVideo.play(); 
+          else 
+            myVideo.pause(); 
+        } 
+        
+        function makeBig() { 
+            myVideo.width = 560; 
+        } 
+        
+        function makeSmall() { 
+            myVideo.width = 320; 
+        } 
+        
+        function makeNormal() { 
+            myVideo.width = 420; 
+        } 
+      </script> 
+      <script>
+          // When the user scrolls the page, execute myFunction 
+          window.onscroll = function() {myFunction()};
+          
+          // Get the navbar
+          var navbar = document.getElementById("navbar");
+          
+          // Get the offset position of the navbar
+          var sticky = navbar.offsetTop;
+          
+          // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+          function myFunction() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky")
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          }
+      </script>
     </main>
     <footer>
       <p>Created by AJ Estes, 2019.</p>
